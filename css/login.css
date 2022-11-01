@@ -1,0 +1,64 @@
+.Login_form {
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* view port, para ocupar todo o espaço da tela */
+    background-color: rgb(222, 222, 231);
+    justify-content: center;
+}
+
+.login_header{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+
+}
+
+.login_header img {
+    width: 100px;
+}
+
+.login_header h1 {
+    color: rgb(12, 11, 10);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2.5em;
+}
+
+.login_button {
+    color: rgb(255, 255, 255);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5em;
+    background-color: rgb(0, 0, 0);
+    padding: 6px;
+    border-radius: 10px;
+    border: 2px solid rgb(8, 7, 7);
+    cursor: pointer;
+    font-weight: 1000
+}
+
+.login_input {
+    border: 2px solid rgb(8, 7, 7) ;
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+    outline: none;
+    padding: 12px;
+    width: 100%;
+    
+
+}
+
+.login_button:disabled{
+
+    background-color:rgb(140, 143, 145); 
+    border: 2px solid rgb(153, 151, 151);
+    color: rgb(197, 193, 193);
+    cursor: auto;
+
+
+}
