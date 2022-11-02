@@ -1,16 +1,45 @@
 .grid {
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* fr = fração */
-    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* fr = fração */
+    gap: 3px;
     width: 100%;
-    max-width: 800px;
+    max-width: 700px; 
+    margin: 50px auto;
 
 }
 
 .card {
+    aspect-ratio: 1/1; /* deixa proporcional */
     width: 100%;
-    height: 200px;
+    border-radius: 15px;
     background-color: darkgrey;
+    position: relative; /* fará as cartas respeitar o tamanho dela */
+    transition: all 500ms ease;
+    transform-style: preserve-3d;
+}
+
+.face{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;      
+}   
+
+.front{
+   transform: rotateY(180deg) /*Gira a carta, tira efeito espelho*/
+}
+
+.back{
+    background-image: url(../Imagens/Ironhack.jpeg);
+    backface-visibility: hidden;
+    position: relative;
+}
+
+.reveal-card{
+    transform: rotateY(180deg);
 
 }
+
