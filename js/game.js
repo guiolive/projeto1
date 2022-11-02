@@ -30,16 +30,19 @@ const revealCard = ({target}) => {
 
 const createCard = (character) => {
     
-    // criação dos elementos
+    // criação dos elementos usando a função create element;
     const card = createElement('div', 'card');
     const front = createElement('div', 'face front');
     const back = createElement('div', 'face back');
 
+    // selecionando as cartas vinculando nome do item da array com a img
     front.style.backgroundImage = `url('../Imagens/${character}.jpg')`;
-
+    
+    // inserindo parte da frente e de trás na carta.
     card.appendChild(front);
     card.appendChild(back);
 
+    card.addEventListener('click', revealCard);
     card.addEventListener('click', revealCard);
     
     return card;
@@ -51,7 +54,7 @@ const loadGame = () => {
 
     shuffledArray.forEach((character) => {
     const card = createCard(character);
-    grid.appendChild(card);
+    grid.appendChild(card); // colocando a carta dentro do grid.
 
     });
 }

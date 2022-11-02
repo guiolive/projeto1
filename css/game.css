@@ -1,22 +1,20 @@
 .grid {
-
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* fr = fração */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* fr = fração, cada fr aumenta uma coluna */
     gap: 3px;
     width: 100%;
     max-width: 700px; 
     margin: 50px auto;
-
 }
 
 .card {
-    aspect-ratio: 1/1; /* deixa proporcional */
+    aspect-ratio: 1/1; /* deixa proporcional na proporção 1-1, quadrada */
     width: 100%;
     border-radius: 15px;
     background-color: darkgrey;
     position: relative; /* fará as cartas respeitar o tamanho dela */
     transition: all 500ms ease;
-    transform-style: preserve-3d;
+    transform-style: preserve-3d; /* comportamento como se o elemento dossed 3d */
 }
 
 .face{
@@ -29,12 +27,13 @@
 }   
 
 .front{
-   transform: rotateY(180deg) /*Gira a carta, tira efeito espelho*/
+   transform: rotateY(180deg); /*Gira a carta, tira efeito espelho*/
+   
 }
 
 .back{
     background-image: url(../Imagens/Ironhack.jpeg);
-    backface-visibility: hidden;
+    backface-visibility: hidden; 
     position: relative;
 }
 
